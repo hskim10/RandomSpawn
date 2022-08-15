@@ -14,14 +14,7 @@ public class onJoin implements Listener {
     public void onJoin(PlayerJoinEvent e) {
         Player player = e.getPlayer();
         if (!player.hasPlayedBefore()) {
-            FileConfiguration config = plugin.getConfig();
-            randomteleport ra = new randomteleport();
-            ra.center_x = config.getInt("Center-X");
-            ra.center_z = config.getInt("Center-Z");
-            ra.radius = config.getInt("Radius");
-            ra.worldname = config.getString("world");
-            player.teleport(ra.set_pos());
-            player.sendMessage("Teleported to random position...");
+            Bukkit.dispatchCommand(Bukkit.getServer().getConsoleSender(),"rt "+e.getPlayer().getName());
         }
     }
 }
