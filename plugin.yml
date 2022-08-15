@@ -1,5 +1,0 @@
-name: RandomSpawn
-version: 1.0
-author: Deca7777
-description: Spawns player randomly.
-main: deca.spawn.Main
