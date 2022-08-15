@@ -7,6 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.event.player.PlayerTeleportEvent;
 
 import static com.deca7777.randomspawn.Main.plugin;
 
@@ -21,8 +22,9 @@ public class rt implements CommandExecutor {
             ra.center_z = config.getInt("Center-Z");
             ra.radius = config.getInt("Radius");
             ra.worldname = config.getString("world");
-            player.teleport(ra.set_pos());
-            player.sendMessage("Teleported to random position...");
+            ra.p = player;
+            player.teleport(ra.set_pos(), PlayerTeleportEvent.TeleportCause.PLUGIN);
+            player.sendMessage("Teleported to random position.");
             return true;
         }
         if (args.length == 1){
@@ -33,8 +35,9 @@ public class rt implements CommandExecutor {
             ra.center_z = config.getInt("Center-Z");
             ra.radius = config.getInt("Radius");
             ra.worldname = config.getString("world");
-            player.teleport(ra.set_pos());
-            player.sendMessage("Teleported to random position...");
+            ra.p = player;
+            player.teleport(ra.set_pos(), PlayerTeleportEvent.TeleportCause.PLUGIN);
+            player.sendMessage("Teleported to random position.");
             return true;
         }
         else if (args.length == 4 && (sender instanceof Player)){
@@ -44,8 +47,9 @@ public class rt implements CommandExecutor {
             ra.center_z = Integer.parseInt(args[1]);
             ra.radius = Integer.parseInt(args[2]);
             ra.worldname = args[3];
-            player.teleport(ra.set_pos());
-            player.sendMessage("Teleported to random position...");
+            ra.p = player;
+            player.teleport(ra.set_pos(), PlayerTeleportEvent.TeleportCause.PLUGIN);
+            player.sendMessage("Teleported to random position.");
             return true;
         }
         else if(args.length == 5){
@@ -55,8 +59,9 @@ public class rt implements CommandExecutor {
             ra.center_z =Integer.parseInt(args[2]);
             ra.radius =Integer.parseInt(args[3]);
             ra.worldname =args[4];
-            player.teleport(ra.set_pos());
-            player.sendMessage("Teleported to random position...");
+            ra.p = player;
+            player.teleport(ra.set_pos(), PlayerTeleportEvent.TeleportCause.PLUGIN);
+            player.sendMessage("Teleported to random position.");
             return true;
         }
         else{
