@@ -1,0 +1,27 @@
+name: RandomSpawn
+version: 1.1
+author: Deca7777
+description: Spawns player randomly.
+main: com.deca7777.randomspawn.Main
+
+commands:
+  setcenter:
+    usage: /<command> <x-center> <z-center>
+    permission: randomspawn.setcenter
+    aliases:
+      - sc
+      - stc
+
+  setradius:
+    usage: /<command> <radius>
+    permission: randomspawn.setradius
+    aliases:
+      - sr
+      - str
+
+  rt:
+    usage: /command [player] [X-Center] [Z-Center] [Radius] [world]
+    permission: randomspawn.randomteleport
+    aliases:
+      - rdt
+      - randomteleport

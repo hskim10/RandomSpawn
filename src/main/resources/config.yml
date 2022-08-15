@@ -1,0 +1,18 @@
+TeleportOnFirstJoin: true
+#If this enabled, RandomSpawn will teleport newbie.
+
+TeleportOnDeath: true
+#If this enabled, RandomSpawn will teleport dead user who had not set spawnpoit randomly.
+
+UseUUID: true
+#If this enabled, RandomSpawn will use user's UUID.
+
+world: world
+#Enter the name you want to use
+
+Center-X: 0
+Center-Z: 0
+#This sets the center
+
+Radius: 1000
+#Players will spawn on the square(radius: this)
